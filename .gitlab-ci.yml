@@ -62,14 +62,11 @@ triage:
         - schedules
 
 triage:dry-run:
-    image: ruby:2.4
+    image: ruby:2.7
     stage: triage
     script:
         - gem install gitlab-triage
-        - gitlab-triage --dry-run --token $TRIAGE_BOT_TOKEN --project-id $CI_PROJECT_PATH --host-url https://gitlab.gnome.org
-    only:
-        - schedules
-    when: manual
+        - gitlab-triage --dry-run --debug --token $TRIAGE_BOT_TOKEN --source-id $CI_PROJECT_PATH
 
 style check:
     image: registry.gitlab.gnome.org/gnome/nautilus:v642646
