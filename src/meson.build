@@ -100,8 +100,6 @@ libnautilus_sources = [
   'nautilus-location-entry.h',
   'nautilus-mime-actions.c',
   'nautilus-mime-actions.h',
-  'nautilus-notebook.c',
-  'nautilus-notebook.h',
   'nautilus-other-locations-window-slot.c',
   'nautilus-other-locations-window-slot.h',
   'nautilus-pathbar.c',

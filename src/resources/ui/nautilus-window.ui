@@ -47,10 +47,21 @@
               <object class="GtkOverlay" id="main_view">
                 <property name="visible">True</property>
                 <child>
-                  <object class="NautilusNotebook" id="notebook">
+                  <object class="GtkBox">
                     <property name="visible">True</property>
-                    <property name="show-tabs">False</property>
-                    <property name="show-border">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="HdyTabBar">
+                        <property name="visible">True</property>
+                        <property name="view">tab_view</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="HdyTabView" id="tab_view">
+                        <property name="visible">True</property>
+                        <property name="menu-model">tab_menu</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
                 <child type="overlay">
@@ -200,4 +211,28 @@
       </object>
     </child>
   </template>
+  <menu id="tab_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_New Tab</attribute>
+        <attribute name="action">win.new-tab</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Move Tab _Left</attribute>
+        <attribute name="action">win.tab-move-left</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Move Tab _Right</attribute>
+        <attribute name="action">win.tab-move-right</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Close Tab</attribute>
+        <attribute name="action">win.close-current-view</attribute>
+      </item>
+    </section>
+  </menu>
 </interface>

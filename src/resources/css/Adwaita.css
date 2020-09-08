@@ -1,6 +1,4 @@
-.nautilus-window,
-.nautilus-window notebook,
-.nautilus-window notebook > stack {
+.nautilus-window {
     background: @theme_base_color;
 }
 
