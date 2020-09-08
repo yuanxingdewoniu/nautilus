@@ -76,6 +76,18 @@ modules:
   sources:
   - type: git
     url: https://gitlab.gnome.org/GNOME/gnome-autoar.git
+- name: libhandy
+  buildsystem: meson
+  confir-opts:
+  - "-Dexamples=false"
+  - "-Dglade_catalog=disabled"
+  - "-Dintrospection=disabled"
+  - "-Dtests=false"
+  - "-Dvapi=false"
+  sources:
+  - type: git
+    url: https://gitlab.gnome.org/exalm/libhandy.git
+    branch: tabs
 - buildsystem: meson
   builddir: true
   name: nautilus

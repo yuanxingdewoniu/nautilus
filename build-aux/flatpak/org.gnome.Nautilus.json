@@ -108,6 +108,24 @@
       ]
     },
     {
+      "name" : "libhandy",
+      "buildsystem" : "meson",
+      "config-opts" : [
+        "-Dexamples=false",
+        "-Dglade_catalog=disabled",
+        "-Dintrospection=disabled",
+        "-Dtests=false",
+        "-Dvapi=false"
+      ],
+      "sources" : [
+        {
+          "type" : "git",
+          "url" : "https://gitlab.gnome.org/exalm/libhandy.git",
+          "branch" : "tabs"
+        }
+      ]
+    },
+    {
       "buildsystem": "meson",
       "builddir": true,
       "name": "nautilus",
