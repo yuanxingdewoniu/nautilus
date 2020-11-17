@@ -22,6 +22,7 @@
     "--filesystem=~/.config/dconf:ro",
     "--talk-name=ca.desrt.dconf",
     "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+    "--env=GTK_DEBUG=interactive",
     "--add-policy=Tracker3.dbus:org.freedesktop.Tracker3.Miner.Files=tracker:FileSystem;tracker:Documents"
   ],
   "modules": [
@@ -104,6 +105,17 @@
         {
           "type": "git",
           "url": "https://gitlab.gnome.org/GNOME/gnome-autoar.git"
+        }
+      ]
+    },
+    {
+      "name": "libhandy",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://gitlab.gnome.org/GNOME/libhandy.git",
+          "branch": "wip/haecker-felix/flap-widget"
         }
       ]
     },
