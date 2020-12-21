@@ -396,7 +396,7 @@ nautilus_search_engine_tracker_start (NautilusSearchProvider *provider)
     if (tracker->fts_enabled && *search_text)
     {
         /* Use fts:match only for content search to not lose some filename results due to stop words. */
-        g_autofree gchar *filtered_search_text;
+        g_autofree gchar *filtered_search_text = NULL;
 
         filtered_search_text = filter_alnum_strdup (search_text);
         g_string_append_printf (sparql,
