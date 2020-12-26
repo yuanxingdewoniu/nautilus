@@ -109,17 +109,6 @@
       ]
     },
     {
-      "name": "libhandy",
-      "buildsystem": "meson",
-      "sources": [
-        {
-          "type": "git",
-          "url": "https://gitlab.gnome.org/GNOME/libhandy.git",
-          "branch": "wip/haecker-felix/flap-widget"
-        }
-      ]
-    },
-    {
       "buildsystem": "meson",
       "builddir": true,
       "name": "nautilus",
