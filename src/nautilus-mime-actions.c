@@ -1511,7 +1511,7 @@ launch_default_for_uris_callback (GObject      *source_object,
     ApplicationLaunchAsyncParameters *params;
     ActivateParameters *activation_params;
     char *uri;
-    GError *error = NULL;
+    g_autoptr (GError) error = NULL;
 
     params = user_data;
     activation_params = params->activation_params;
