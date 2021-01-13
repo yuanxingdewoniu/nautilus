@@ -24,15 +24,15 @@
 #include "nautilus-query.h"
 #include "nautilus-toolbar-menu-sections.h"
 
-#define NAUTILUS_VIEW_GRID_ID_VALUE 0
+/* These values must match the org.gnome.nautilus.FolderView schema enum */
 #define NAUTILUS_VIEW_LIST_ID_VALUE 1
+#define NAUTILUS_VIEW_GRID_ID_VALUE 2
 enum
 {
-    NAUTILUS_VIEW_GRID_ID = NAUTILUS_VIEW_GRID_ID_VALUE,
+    NAUTILUS_VIEW_INVALID_ID = 0,
     NAUTILUS_VIEW_LIST_ID = NAUTILUS_VIEW_LIST_ID_VALUE,
-    NAUTILUS_VIEW_EMPTY_ID,
+    NAUTILUS_VIEW_GRID_ID = NAUTILUS_VIEW_GRID_ID_VALUE,
     NAUTILUS_VIEW_OTHER_LOCATIONS_ID,
-    NAUTILUS_VIEW_INVALID_ID,
 };
 
 G_BEGIN_DECLS

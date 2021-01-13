@@ -1039,8 +1039,8 @@ action_files_view_mode (GSimpleAction *action,
 
 const GActionEntry slot_entries[] =
 {
-    /* 4 is NAUTILUS_VIEW_INVALID_ID */
-    { "files-view-mode", NULL, "u", "uint32 4", action_files_view_mode },
+    /* 0 is NAUTILUS_VIEW_INVALID_ID */
+    { "files-view-mode", NULL, "u", "uint32 0", action_files_view_mode },
     { "files-view-mode-toggle", action_files_view_mode_toggle },
     { "search-visible", NULL, NULL, "false", action_search_visible },
 };
