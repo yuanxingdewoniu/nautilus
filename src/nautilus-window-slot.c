@@ -1127,6 +1127,7 @@ static void
 nautilus_window_slot_init (NautilusWindowSlot *self)
 {
     GApplication *app;
+
     app = g_application_get_default ();
 
     g_signal_connect (nautilus_trash_monitor_get (),
@@ -1149,8 +1150,13 @@ nautilus_window_slot_init (NautilusWindowSlot *self)
     gtk_widget_insert_action_group (GTK_WIDGET (self),
                                     "slot",
                                     G_ACTION_GROUP (self->slot_action_group));
-    nautilus_application_set_accelerator (app, "slot.files-view-mode(uint32 1)", "<control>1");
-    nautilus_application_set_accelerator (app, "slot.files-view-mode(uint32 0)", "<control>2");
+
+    nautilus_application_set_accelerator (app,
+                                          "slot.files-view-mode(uint32 " G_STRINGIFY (NAUTILUS_VIEW_LIST_ID_VALUE) ")",
+                                          "<control>1");
+    nautilus_application_set_accelerator (app,
+                                          "slot.files-view-mode(uint32 " G_STRINGIFY (NAUTILUS_VIEW_GRID_ID_VALUE) ")",
+                                          "<control>2");
     nautilus_application_set_accelerator (app, "slot.search-visible", "<control>f");
 
     self->view_mode_before_search = NAUTILUS_VIEW_INVALID_ID;
