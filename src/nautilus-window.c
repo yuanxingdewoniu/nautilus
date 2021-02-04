@@ -33,6 +33,7 @@
 #include <gdk/gdkkeysyms.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
+#include <libhandy-1/handy.h>
 #include <math.h>
 #include <sys/time.h>
 
@@ -98,7 +99,7 @@ static void close_slot (NautilusWindow     *window,
 
 struct _NautilusWindow
 {
-    GtkApplicationWindow parent_instance;
+    HdyApplicationWindow parent_instance;
 
     GtkWidget *notebook;
 
@@ -164,7 +165,7 @@ enum
 
 static guint signals[LAST_SIGNAL] = { 0 };
 
-G_DEFINE_TYPE (NautilusWindow, nautilus_window, GTK_TYPE_APPLICATION_WINDOW);
+G_DEFINE_TYPE (NautilusWindow, nautilus_window, HDY_TYPE_APPLICATION_WINDOW);
 
 static const struct
 {
